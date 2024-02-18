@@ -1,0 +1,1810 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="nodomain.freeyourgadget.gadgetbridge"
+4    android:versionCode="6210"
+5    android:versionName="0.6210" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" /> <!-- Used for Bluetooth access -->
+11-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission
+12-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:7:5-9:38
+13        android:name="android.permission.BLUETOOTH"
+13-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:8:9-52
+14        android:maxSdkVersion="33" />
+14-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:9:9-35
+15    <uses-permission
+15-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:10:5-12:38
+16        android:name="android.permission.BLUETOOTH_CONNECT"
+16-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:11:9-60
+17        android:maxSdkVersion="33" />
+17-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:12:9-35
+18    <uses-permission
+18-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:12:38-14:34
+19        android:name="android.permission.BLUETOOTH_SCAN"
+19-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:13:5-53
+20        android:maxSdkVersion="33" />
+20-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:14:5-31
+21    <uses-permission
+21-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:15:5-17:38
+22        android:name="android.permission.BLUETOOTH_ADMIN"
+22-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:16:9-58
+23        android:maxSdkVersion="33" />
+23-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:17:9-35
+24    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Since Android 10 -->
+24-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:18:5-81
+24-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:18:22-78
+25    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+25-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:19:5-79
+25-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:19:22-76
+26    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+26-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:20:5-85
+26-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:20:22-82
+27    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+27-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:21:5-79
+27-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:21:22-76
+28    <!-- <uses-permission android:name="android.permission.READ_CALL_LOG" /> -->
+29    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+30    <!-- <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" /> -->
+31    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+32    <!-- <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" /> -->
+33    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+34    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+35    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+36    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+36-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:30:5-80
+36-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:30:22-77
+37    <!-- <uses-permission android:name="android.permission.READ_CALENDAR" /> -->
+38    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+38-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:32:5-81
+38-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:32:22-78
+39    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" /> <!-- Used for background service -->
+39-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:33:5-35:47
+39-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:34:9-64
+40    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+40-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:36:5-81
+40-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:36:22-78
+41    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+41-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:37:5-77
+41-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:37:22-74
+42    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" /> <!-- Used for reverse find device -->
+42-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:38:5-94
+42-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:38:22-91
+43    <!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+44    <!-- Used for weather provider access -->
+45    <!-- <uses-permission android:name="cyanogenmod.permission.ACCESS_WEATHER_MANAGER" /> -->
+46    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+46-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:41:5-85
+46-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:41:22-82
+47    <!-- <uses-permission android:name="cyanogenmod.permission.READ_WEATHER" /> -->
+48    <!-- <uses-permission android:name="lineageos.permission.ACCESS_WEATHER_MANAGER" /> -->
+49    <!-- <uses-permission android:name="lineageos.permission.READ_WEATHER" /> -->
+50    <!-- <uses-permission android:name="org.omnirom.omnijaws.READ_WEATHER" /> -->
+51    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+51-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:46:5-76
+51-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:46:22-73
+52    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+52-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:47:5-79
+52-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:47:22-76
+53    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+53-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:48:5-83
+53-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:48:22-80
+54    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+54-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:49:5-71
+54-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:49:22-68
+55    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- Used for reverse find device -->
+55-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:50:5-80
+55-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:50:22-77
+56    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Used for weather provider access -->
+56-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:51:5-66
+56-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:51:22-63
+57    <!-- <uses-permission android:name="cyanogenmod.permission.ACCESS_WEATHER_MANAGER" /> -->
+58    <!-- <uses-permission android:name="cyanogenmod.permission.READ_WEATHER" /> -->
+59    <!-- <uses-permission android:name="lineageos.permission.ACCESS_WEATHER_MANAGER" /> -->
+60    <!-- <uses-permission android:name="lineageos.permission.READ_WEATHER" /> -->
+61    <!-- <uses-permission android:name="org.omnirom.omnijaws.READ_WEATHER" /> -->
+62
+63    <uses-feature
+63-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:58:5-60:35
+64        android:name="android.hardware.bluetooth"
+64-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:59:9-50
+65        android:required="true" />
+65-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:60:9-32
+66    <uses-feature
+66-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:61:5-63:35
+67        android:name="android.hardware.bluetooth_le"
+67-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:62:9-53
+68        android:required="true" />
+68-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:63:9-32
+69    <uses-feature
+69-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:64:5-66:36
+70        android:name="android.hardware.telephony"
+70-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:65:9-50
+71        android:required="false" />
+71-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:66:9-33
+72    <uses-feature
+72-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:67:5-69:35
+73        android:name="android.software.companion_device_setup"
+73-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:68:9-63
+74        android:required="true" />
+74-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:69:9-32
+75
+76    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- needed for aosp-derived ROMs? -->
+76-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
+76-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:22-65
+77    <!-- android:requestLegacyExternalStorage="true" -->
+78    <application
+78-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:73:5-730:19
+79        android:name="nodomain.freeyourgadget.gadgetbridge.GBApplication"
+79-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:74:9-38
+80        android:allowBackup="true"
+80-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:75:9-35
+81        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+81-->[androidx.core:core:1.7.0] /Users/pjukic/.gradle/caches/transforms-3/1f8c93062798960550993eb537b711ee/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+82        android:debuggable="true"
+83        android:extractNativeLibs="false"
+84        android:fullBackupContent="false"
+84-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:76:9-42
+85        android:icon="@mipmap/ic_guardian_launcher_round"
+85-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:77:9-58
+86        android:label="@string/app_name"
+86-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:78:9-41
+87        android:requestLegacyExternalStorage="true"
+87-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:79:9-52
+88        android:roundIcon="@mipmap/ic_guardian_launcher_round"
+88-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:80:9-63
+89        android:supportsRtl="true"
+89-->[com.github.wax911:android-emojify:0.1.7] /Users/pjukic/.gradle/caches/transforms-3/2aa71cbfc98d5394b14fca5f89f1ee00/transformed/jetified-android-emojify-0.1.7/AndroidManifest.xml:13:9-35
+90        android:testOnly="true"
+91        android:theme="@style/GuardianTheme"
+91-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:81:9-45
+92        android:usesCleartextTraffic="true" >
+92-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:82:9-44
+93        <activity
+93-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:83:9-86:67
+94            android:name="nodomain.freeyourgadget.gadgetbridge.GuardianCreateAccountActivity"
+94-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:84:13-58
+95            android:exported="true"
+95-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:85:13-36
+96            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.GuardianLoginActivity" />
+96-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:86:13-64
+97        <activity
+97-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:87:9-95:20
+98            android:name="nodomain.freeyourgadget.gadgetbridge.GuardianLoginActivity"
+98-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:88:13-50
+99            android:exported="true"
+99-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:89:13-36
+100            android:theme="@style/GuardianTheme.NoActionBar" >
+100-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:90:13-61
+101            <intent-filter>
+101-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:91:13-94:29
+102                <action android:name="android.intent.action.MAIN" />
+102-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:92:17-69
+102-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:92:25-66
+103
+104                <category android:name="android.intent.category.LAUNCHER" />
+104-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:93:17-77
+104-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:93:27-74
+105            </intent-filter>
+106        </activity>
+107        <activity
+107-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:96:9-105:20
+108            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2"
+108-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:97:13-55
+109            android:exported="true"
+109-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:100:13-36
+110            android:label="@string/title_activity_controlcenter"
+110-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:98:13-65
+111            android:launchMode="singleTop"
+111-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:99:13-43
+112            android:theme="@style/SplashTheme" >
+112-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:101:13-47
+113            <intent-filter>
+113-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:102:13-104:29
+114                <category android:name="android.intent.category.DEFAULT" />
+114-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+114-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+115            </intent-filter>
+116        </activity>
+117        <activity
+117-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:106:9-110:72
+118            android:name="nodomain.freeyourgadget.gadgetbridge.activities.SettingsActivity"
+118-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:107:13-56
+119            android:exported="false"
+119-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:109:13-37
+120            android:label="@string/title_activity_settings"
+120-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:108:13-60
+121            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+121-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:110:13-69
+122        <activity
+122-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:111:9-115:85
+123            android:name="nodomain.freeyourgadget.gadgetbridge.activities.AboutUserPreferencesActivity"
+123-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:112:13-68
+124            android:exported="false"
+124-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:114:13-37
+125            android:label="@string/activity_prefs_about_you"
+125-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:113:13-61
+126            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.AboutUserPreferencesActivity" />
+126-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:115:13-82
+127        <activity
+127-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:116:9-120:89
+128            android:name="nodomain.freeyourgadget.gadgetbridge.activities.charts.ChartsPreferencesActivity"
+128-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:117:13-72
+129            android:exported="false"
+129-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:119:13-37
+130            android:label="@string/activity_prefs_charts"
+130-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:118:13-58
+131            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.charts.ChartsPreferencesActivity" />
+131-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:120:13-86
+132        <activity
+132-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:121:9-125:73
+133            android:name="nodomain.freeyourgadget.gadgetbridge.devices.miband.MiBandPreferencesActivity"
+133-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:122:13-69
+134            android:exported="false"
+134-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:124:13-37
+135            android:label="@string/preferences_miband_settings"
+135-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:123:13-64
+136            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.SettingsActivity" />
+136-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:125:13-70
+137        <activity
+137-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:126:9-130:73
+138            android:name="nodomain.freeyourgadget.gadgetbridge.devices.zetime.ZeTimePreferenceActivity"
+138-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:127:13-68
+139            android:exported="false"
+139-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:129:13-37
+140            android:label="@string/zetime_title_settings"
+140-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:128:13-58
+141            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.SettingsActivity" />
+141-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:130:13-70
+142        <activity
+142-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:131:9-135:72
+143            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ActivitySummariesActivity"
+143-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:132:13-65
+144            android:exported="false"
+144-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:134:13-37
+145            android:label="@string/activity_summaries"
+145-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:133:13-55
+146            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+146-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:135:13-69
+147        <activity
+147-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:136:9-141:72
+148            android:name="nodomain.freeyourgadget.gadgetbridge.activities.appmanager.AppManagerActivity"
+148-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:137:13-69
+149            android:exported="false"
+149-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:140:13-37
+150            android:label="@string/title_activity_appmanager"
+150-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:138:13-62
+151            android:launchMode="singleTop"
+151-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:139:13-43
+152            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+152-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:141:13-69
+153        <activity
+153-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:142:9-146:73
+154            android:name="nodomain.freeyourgadget.gadgetbridge.activities.AppBlacklistActivity"
+154-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:143:13-60
+155            android:exported="false"
+155-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:145:13-37
+156            android:label="@string/title_activity_appblacklist"
+156-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:144:13-64
+157            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.SettingsActivity" />
+157-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:146:13-70
+158        <activity
+158-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:147:9-151:73
+159            android:name="nodomain.freeyourgadget.gadgetbridge.activities.CalBlacklistActivity"
+159-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:148:13-60
+160            android:exported="false"
+160-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:150:13-37
+161            android:label="@string/title_activity_calblacklist"
+161-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:149:13-64
+162            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.SettingsActivity" />
+162-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:151:13-70
+163        <activity
+163-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:152:9-374:20
+164            android:name="nodomain.freeyourgadget.gadgetbridge.activities.FwAppInstallerActivity"
+164-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:153:13-62
+165            android:exported="true"
+165-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:155:13-36
+166            android:label="@string/title_activity_fw_app_insaller"
+166-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:154:13-67
+167            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" >
+167-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:156:13-69
+168            <intent-filter>
+168-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:157:13-250:29
+169                <action android:name="android.intent.action.VIEW" />
+169-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:17-69
+169-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:25-66
+170
+171                <category android:name="android.intent.category.DEFAULT" />
+171-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+171-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+172
+173                <data android:mimeType="*/*" />
+173-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+173-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+174                <!-- needed for aosp-derived ROMs? -->
+175
+176                <data android:host="*" />
+176-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+176-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:165:23-39
+177                <data android:scheme="file" />
+177-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+177-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:166:23-44
+178
+179                <!-- as seen on openkeychain repo: https://github.com/open-keychain/open-keychain/blob/master/OpenKeychain/src/main/AndroidManifest.xml -->
+180
+181                <data android:pathPattern="/.*\\.fw" />
+181-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+181-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+182                <data android:pathPattern="/.*\\..*\\.fw" />
+182-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+182-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+183                <data android:pathPattern="/.*\\..*\\..*\\.fw" />
+183-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+183-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+184                <data android:pathPattern="/.*\\..*\\..*\\..*\\.fw" />
+184-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+184-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+185                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.fw" />
+185-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+185-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+186                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+186-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+186-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+187                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+187-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+187-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+188                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+188-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+188-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+189                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+189-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+189-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+190                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+190-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+190-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+191                <data android:pathPattern="/.*\\.ft.en" />
+191-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+191-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+192                <data android:pathPattern="/.*\\..*\\.ft.en" />
+192-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+192-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+193                <data android:pathPattern="/.*\\..*\\..*\\.ft.en" />
+193-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+193-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+194                <data android:pathPattern="/.*\\..*\\..*\\..*\\.ft.en" />
+194-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+194-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+195                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.ft.en" />
+195-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+195-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+196                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+196-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+196-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+197                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+197-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+197-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+198                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+198-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+198-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+199                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+199-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+199-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+200                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+200-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+200-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+201                <data android:pathPattern="/.*\\.ft" />
+201-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+201-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+202                <data android:pathPattern="/.*\\..*\\.ft" />
+202-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+202-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+203                <data android:pathPattern="/.*\\..*\\..*\\.ft" />
+203-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+203-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+204                <data android:pathPattern="/.*\\..*\\..*\\..*\\.ft" />
+204-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+204-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+205                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.ft" />
+205-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+205-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+206                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+206-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+206-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+207                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+207-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+207-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+208                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+208-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+208-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+209                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+209-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+209-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+210                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+210-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+210-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+211                <data android:pathPattern="/.*\\.res" />
+211-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+211-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+212                <data android:pathPattern="/.*\\..*\\.res" />
+212-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+212-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+213                <data android:pathPattern="/.*\\..*\\..*\\.res" />
+213-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+213-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+214                <data android:pathPattern="/.*\\..*\\..*\\..*\\.res" />
+214-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+214-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+215                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.res" />
+215-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+215-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+216                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.res" />
+216-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+216-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+217                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+217-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+217-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+218                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+218-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+218-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+219                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+219-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+219-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+220                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+220-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+220-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+221                <data android:pathPattern="/.*\\.gps" />
+221-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+221-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+222                <data android:pathPattern="/.*\\..*\\.gps" />
+222-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+222-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+223                <data android:pathPattern="/.*\\..*\\..*\\.gps" />
+223-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+223-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+224                <data android:pathPattern="/.*\\..*\\..*\\..*\\.gps" />
+224-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+224-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+225                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.gps" />
+225-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+225-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+226                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+226-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+226-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+227                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+227-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+227-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+228                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+228-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+228-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+229                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+229-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+229-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+230                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+230-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+230-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+231                <data android:pathPattern="/.*\\.pbw" />
+231-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+231-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+232                <data android:pathPattern="/.*\\..*\\.pbw" />
+232-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+232-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+233                <data android:pathPattern="/.*\\..*\\..*\\.pbw" />
+233-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+233-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+234                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbw" />
+234-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+234-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+235                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbw" />
+235-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+235-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+236                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+236-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+236-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+237                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+237-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+237-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+238                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+238-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+238-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+239                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+239-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+239-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+240                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+240-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+240-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+241                <data android:pathPattern="/.*\\.pbz" />
+241-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+241-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+242                <data android:pathPattern="/.*\\..*\\.pbz" />
+242-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+242-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+243                <data android:pathPattern="/.*\\..*\\..*\\.pbz" />
+243-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+243-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+244                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbz" />
+244-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+244-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+245                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbz" />
+245-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+245-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+246                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+246-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+246-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+247                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+247-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+247-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+248                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+248-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+248-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+249                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+249-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+249-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+250                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+250-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+250-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+251                <data android:pathPattern="/.*\\.pbl" />
+251-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+251-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+252                <data android:pathPattern="/.*\\..*\\.pbl" />
+252-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+252-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+253                <data android:pathPattern="/.*\\..*\\..*\\.pbl" />
+253-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+253-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+254                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbl" />
+254-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+254-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+255                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbl" />
+255-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+255-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+256                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+256-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+256-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+257                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+257-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+257-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+258                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+258-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+258-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+259                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+259-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+259-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+260                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+260-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+260-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+261            </intent-filter>
+262            <intent-filter>
+262-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:251:13-343:29
+263                <action android:name="android.intent.action.VIEW" />
+263-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:17-69
+263-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:25-66
+264
+265                <category android:name="android.intent.category.DEFAULT" />
+265-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+265-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+266
+267                <!-- no mimeType filter, needed for CM-derived ROMs? -->
+268
+269                <data android:host="*" />
+269-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+269-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:165:23-39
+270                <data android:scheme="file" />
+270-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+270-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:166:23-44
+271
+272                <!-- as seen on openkeychain repo: https://github.com/open-keychain/open-keychain/blob/master/OpenKeychain/src/main/AndroidManifest.xml -->
+273
+274                <data android:pathPattern="/.*\\.fw" />
+274-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+274-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+275                <data android:pathPattern="/.*\\..*\\.fw" />
+275-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+275-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+276                <data android:pathPattern="/.*\\..*\\..*\\.fw" />
+276-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+276-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+277                <data android:pathPattern="/.*\\..*\\..*\\..*\\.fw" />
+277-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+277-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+278                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.fw" />
+278-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+278-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+279                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+279-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+279-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+280                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+280-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+280-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+281                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+281-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+281-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+282                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+282-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+282-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+283                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fw" />
+283-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+283-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+284                <data android:pathPattern="/.*\\.ft.en" />
+284-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+284-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+285                <data android:pathPattern="/.*\\..*\\.ft.en" />
+285-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+285-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+286                <data android:pathPattern="/.*\\..*\\..*\\.ft.en" />
+286-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+286-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+287                <data android:pathPattern="/.*\\..*\\..*\\..*\\.ft.en" />
+287-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+287-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+288                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.ft.en" />
+288-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+288-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+289                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+289-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+289-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+290                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+290-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+290-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+291                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+291-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+291-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+292                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+292-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+292-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+293                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft.en" />
+293-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+293-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+294                <data android:pathPattern="/.*\\.ft" />
+294-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+294-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+295                <data android:pathPattern="/.*\\..*\\.ft" />
+295-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+295-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+296                <data android:pathPattern="/.*\\..*\\..*\\.ft" />
+296-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+296-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+297                <data android:pathPattern="/.*\\..*\\..*\\..*\\.ft" />
+297-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+297-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+298                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.ft" />
+298-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+298-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+299                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+299-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+299-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+300                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+300-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+300-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+301                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+301-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+301-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+302                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+302-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+302-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+303                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.ft" />
+303-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+303-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+304                <data android:pathPattern="/.*\\.res" />
+304-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+304-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+305                <data android:pathPattern="/.*\\..*\\.res" />
+305-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+305-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+306                <data android:pathPattern="/.*\\..*\\..*\\.res" />
+306-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+306-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+307                <data android:pathPattern="/.*\\..*\\..*\\..*\\.res" />
+307-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+307-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+308                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.res" />
+308-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+308-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+309                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.res" />
+309-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+309-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+310                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+310-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+310-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+311                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+311-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+311-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+312                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+312-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+312-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+313                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.res" />
+313-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+313-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+314                <data android:pathPattern="/.*\\.gps" />
+314-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+314-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+315                <data android:pathPattern="/.*\\..*\\.gps" />
+315-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+315-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+316                <data android:pathPattern="/.*\\..*\\..*\\.gps" />
+316-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+316-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+317                <data android:pathPattern="/.*\\..*\\..*\\..*\\.gps" />
+317-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+317-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+318                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.gps" />
+318-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+318-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+319                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+319-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+319-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+320                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+320-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+320-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+321                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+321-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+321-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+322                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+322-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+322-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+323                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.gps" />
+323-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+323-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+324                <data android:pathPattern="/.*\\.pbw" />
+324-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+324-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+325                <data android:pathPattern="/.*\\..*\\.pbw" />
+325-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+325-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+326                <data android:pathPattern="/.*\\..*\\..*\\.pbw" />
+326-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+326-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+327                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbw" />
+327-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+327-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+328                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbw" />
+328-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+328-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+329                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+329-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+329-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+330                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+330-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+330-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+331                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+331-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+331-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+332                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+332-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+332-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+333                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbw" />
+333-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+333-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+334                <data android:pathPattern="/.*\\.pbz" />
+334-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+334-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+335                <data android:pathPattern="/.*\\..*\\.pbz" />
+335-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+335-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+336                <data android:pathPattern="/.*\\..*\\..*\\.pbz" />
+336-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+336-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+337                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbz" />
+337-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+337-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+338                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbz" />
+338-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+338-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+339                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+339-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+339-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+340                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+340-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+340-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+341                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+341-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+341-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+342                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+342-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+342-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+343                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbz" />
+343-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+343-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+344                <data android:pathPattern="/.*\\.pbl" />
+344-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+344-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+345                <data android:pathPattern="/.*\\..*\\.pbl" />
+345-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+345-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+346                <data android:pathPattern="/.*\\..*\\..*\\.pbl" />
+346-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+346-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+347                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pbl" />
+347-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+347-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+348                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pbl" />
+348-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+348-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+349                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+349-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+349-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+350                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+350-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+350-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+351                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+351-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+351-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+352                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+352-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+352-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+353                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pbl" />
+353-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+353-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:170:23-53
+354            </intent-filter>
+355
+356            <!-- to receive the firmwares from the download content provider -->
+357            <intent-filter android:scheme="http" >
+357-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:346:13-353:29
+357-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:346:28-49
+358                <action android:name="android.intent.action.VIEW" />
+358-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:17-69
+358-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:25-66
+359
+360                <category android:name="android.intent.category.DEFAULT" />
+360-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+360-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+361
+362                <data android:mimeType="application/octet-stream" />
+362-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+362-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+363            </intent-filter>
+364
+365            <!-- to receive firmwares from the download content provider if recognized as zip -->
+366            <intent-filter android:scheme="http" >
+366-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:356:13-364:29
+366-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:356:28-49
+367                <action android:name="android.intent.action.VIEW" />
+367-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:17-69
+367-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:25-66
+368
+369                <category android:name="android.intent.category.DEFAULT" />
+369-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+369-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+370
+371                <data android:mimeType="application/zip" />
+371-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+371-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+372                <data android:mimeType="application/x-zip-compressed" />
+372-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+372-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+373            </intent-filter>
+374
+375            <!-- to receive files from the "share" intent -->
+376            <intent-filter>
+376-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:367:13-373:29
+377                <action android:name="android.intent.action.SEND" />
+377-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:368:17-69
+377-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:368:25-66
+378
+379                <category android:name="android.intent.category.DEFAULT" />
+379-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+379-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+380
+381                <data android:mimeType="*/*" />
+381-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+381-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+382            </intent-filter>
+383        </activity>
+384        <activity
+384-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:375:9-380:57
+385            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ga_activities.GAServerSyncActivity"
+385-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:376:13-74
+386            android:exported="false"
+386-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:378:13-37
+387            android:label="@string/synchronize_with_server"
+387-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:377:13-60
+388            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2"
+388-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:379:13-69
+389            android:windowSoftInputMode="stateHidden" />
+389-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:380:13-54
+390        <activity
+390-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:381:9-384:72
+391            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ga_activities.GuardianUpdateActivity"
+391-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:382:13-76
+392            android:exported="true"
+392-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:383:13-36
+393            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+393-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:384:13-69
+394
+395        <service
+395-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:386:9-394:19
+396            android:name="nodomain.freeyourgadget.gadgetbridge.externalevents.NotificationListener"
+396-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:387:13-64
+397            android:exported="true"
+397-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:389:13-36
+398            android:label="@string/app_name"
+398-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:388:13-45
+399            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+399-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:390:13-87
+400            <intent-filter>
+400-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:391:13-393:29
+401                <action android:name="android.service.notification.NotificationListenerService" />
+401-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:392:17-99
+401-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:392:25-96
+402            </intent-filter>
+403        </service>
+404        <service android:name="nodomain.freeyourgadget.gadgetbridge.service.NotificationCollectorMonitorService" />
+404-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:395:9-80
+404-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:395:18-77
+405        <service android:name="nodomain.freeyourgadget.gadgetbridge.service.DeviceCommunicationService" />
+405-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:396:9-71
+405-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:396:18-68
+406        <service
+406-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:397:9-399:59
+407            android:name="nodomain.freeyourgadget.gadgetbridge.devices.pinetime.PineTimeDFUService"
+407-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:398:13-64
+408            android:label="PineTime Nordic DFU service" />
+408-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:399:13-56
+409
+410        <receiver
+410-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:401:9-408:20
+411            android:name="nodomain.freeyourgadget.gadgetbridge.externalevents.WeatherNotificationReceiver"
+411-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:402:13-71
+412            android:enabled="true"
+412-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:403:13-35
+413            android:exported="true" >
+413-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:404:13-36
+414            <intent-filter>
+414-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:405:13-407:29
+415                <action android:name="ru.gelin.android.weather.notification.ACTION_WEATHER_UPDATE_2" />
+415-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:406:17-104
+415-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:406:25-101
+416            </intent-filter>
+417        </receiver>
+418
+419        <activity
+419-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:410:9-416:20
+420            android:name="nodomain.freeyourgadget.gadgetbridge.externalevents.WeatherNotificationConfig"
+420-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:411:13-69
+421            android:exported="true" >
+421-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:412:13-36
+422            <intent-filter>
+422-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:413:13-415:29
+423                <action android:name="ru.gelin.android.weather.notification.ACTION_WEATHER_SKIN_PREFERENCES" />
+423-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:414:17-112
+423-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:414:25-109
+424            </intent-filter>
+425        </activity>
+426
+427        <receiver
+427-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:418:9-427:20
+428            android:name="nodomain.freeyourgadget.gadgetbridge.externalevents.AutoStartReceiver"
+428-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:419:13-61
+429            android:exported="true"
+429-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:420:13-36
+430            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+430-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:421:13-75
+431            <intent-filter>
+431-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:422:13-426:29
+432                <action android:name="android.intent.action.BOOT_COMPLETED" />
+432-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:423:17-79
+432-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:423:25-76
+433
+434                <category android:name="android.intent.category.DEFAULT" />
+434-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+434-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+435            </intent-filter>
+436        </receiver>
+437        <receiver
+437-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:428:9-439:20
+438            android:name="nodomain.freeyourgadget.gadgetbridge.externalevents.BluetoothStateChangeReceiver"
+438-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:429:13-72
+439            android:exported="true"
+439-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:430:13-36
+440            android:permission="android.permission.BLUETOOTH,android.permission.BLUETOOTH_ADMIN" >
+440-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:431:13-97
+441            <intent-filter>
+441-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:432:13-438:29
+442                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+442-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:433:17-89
+442-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:433:25-86
+443                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+443-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:434:17-100
+443-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:434:25-97
+444                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+444-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:435:17-88
+444-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:435:25-85
+445                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+445-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:436:17-91
+445-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:436:25-88
+446                <action android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED" />
+446-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:437:17-99
+446-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:437:25-96
+447            </intent-filter>
+448        </receiver>
+449        <receiver
+449-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:440:9-446:20
+450            android:name="nodomain.freeyourgadget.gadgetbridge.service.receivers.GBMusicControlReceiver"
+450-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:441:13-69
+451            android:exported="false" >
+451-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:442:13-37
+452            <intent-filter>
+452-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:443:13-445:29
+453                <action android:name="nodomain.freeyourgadget.gadgetbridge.musiccontrol" />
+453-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:444:17-92
+453-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:444:25-89
+454            </intent-filter>
+455        </receiver>
+456        <!--
+457        <receiver
+458            android:name=".service.receivers.GBCallControlReceiver"
+459            android:exported="false">
+460            <intent-filter>
+461                <action android:name="nodomain.freeyourgadget.gadgetbridge.callcontrol" />
+462            </intent-filter>
+463        </receiver>
+464        -->
+465        <receiver
+465-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:456:9-459:40
+466            android:name="nodomain.freeyourgadget.gadgetbridge.database.PeriodicExporter"
+466-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:457:13-54
+467            android:enabled="true"
+467-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:458:13-35
+468            android:exported="false" />
+468-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:459:13-37
+469        <receiver
+469-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:460:9-463:40
+470            android:name="guardianangel.PeriodicGuardianExporter"
+470-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:461:13-66
+471            android:enabled="true"
+471-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:462:13-35
+472            android:exported="false" />
+472-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:463:13-37
+473        <!--
+474        <receiver
+475            android:name="guardianangel.PeriodicGuardianUpdateChecker"
+476            android:enabled="true"
+477            android:exported="false" />
+478        -->
+479        <receiver
+479-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:470:9-473:40
+480            android:name="guardianangel.PeriodicGuardianUpdater"
+480-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:471:13-65
+481            android:enabled="true"
+481-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:472:13-35
+482            android:exported="false" />
+482-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:473:13-37
+483        <!--
+484            forcing the DebugActivity to portrait mode avoids crashes with the progress
+485            dialog when changing orientation
+486        -->
+487        <activity
+487-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:478:9-484:57
+488            android:name="nodomain.freeyourgadget.gadgetbridge.activities.DebugActivity"
+488-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:479:13-53
+489            android:exported="false"
+489-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:483:13-37
+490            android:label="@string/title_activity_debug"
+490-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:480:13-57
+491            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2"
+491-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:481:13-69
+492            android:screenOrientation="portrait"
+492-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:482:13-49
+493            android:windowSoftInputMode="stateHidden" />
+493-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:484:13-54
+494        <activity
+494-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:485:9-490:57
+495            android:name="nodomain.freeyourgadget.gadgetbridge.activities.AboutActivity"
+495-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:486:13-53
+496            android:exported="false"
+496-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:489:13-37
+497            android:label="@string/about_activity_title"
+497-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:487:13-57
+498            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2"
+498-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:488:13-69
+499            android:windowSoftInputMode="stateHidden" />
+499-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:490:13-54
+500        <activity
+500-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:491:9-495:72
+501            android:name="nodomain.freeyourgadget.gadgetbridge.activities.BatteryInfoActivity"
+501-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:492:13-59
+502            android:exported="false"
+502-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:494:13-37
+503            android:label="@string/battery_detail_activity_title"
+503-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:493:13-66
+504            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+504-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:495:13-69
+505        <activity
+505-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:496:9-501:57
+506            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ActivitySummaryDetail"
+506-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:497:13-61
+507            android:exported="false"
+507-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:499:13-37
+508            android:label="@string/activity_summary_detail"
+508-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:498:13-60
+509            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ActivitySummariesActivity"
+509-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:500:13-79
+510            android:windowSoftInputMode="stateHidden" />
+510-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:501:13-54
+511        <activity
+511-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:502:9-507:82
+512            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ActivitySummariesFilter"
+512-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:503:13-63
+513            android:excludeFromRecents="true"
+513-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:504:13-46
+514            android:exported="false"
+514-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:505:13-37
+515            android:label="@string/activity_filter_filter_title"
+515-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:506:13-65
+516            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ActivitySummariesActivity" />
+516-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:507:13-79
+517        <activity
+517-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:508:9-513:57
+518            android:name="nodomain.freeyourgadget.gadgetbridge.activities.DataManagementActivity"
+518-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:509:13-62
+519            android:exported="false"
+519-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:511:13-37
+520            android:label="@string/title_activity_db_management"
+520-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:510:13-65
+521            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2"
+521-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:512:13-69
+522            android:windowSoftInputMode="stateHidden" />
+522-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:513:13-54
+523        <activity
+523-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:514:9-518:72
+524            android:name="nodomain.freeyourgadget.gadgetbridge.activities.DiscoveryActivity"
+524-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:515:13-57
+525            android:exported="false"
+525-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:517:13-37
+526            android:label="@string/title_activity_discovery"
+526-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:516:13-61
+527            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+527-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:518:13-69
+528        <activity
+528-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:519:9-522:70
+529            android:name="nodomain.freeyourgadget.gadgetbridge.activities.AndroidPairingActivity"
+529-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:520:13-62
+530            android:exported="false"
+530-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:521:13-37
+531            android:label="@string/title_activity_android_pairing" />
+531-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:522:13-67
+532        <activity
+532-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:523:9-526:70
+533            android:name="nodomain.freeyourgadget.gadgetbridge.devices.miband.MiBandPairingActivity"
+533-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:524:13-65
+534            android:exported="false"
+534-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:525:13-37
+535            android:label="@string/title_activity_mi_band_pairing" />
+535-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:526:13-67
+536        <activity
+536-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:527:9-530:69
+537            android:name="nodomain.freeyourgadget.gadgetbridge.devices.pebble.PebblePairingActivity"
+537-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:528:13-65
+538            android:exported="false"
+538-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:529:13-37
+539            android:label="@string/title_activity_pebble_pairing" />
+539-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:530:13-66
+540        <activity
+540-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:531:9-534:69
+541            android:name="nodomain.freeyourgadget.gadgetbridge.devices.watch9.Watch9PairingActivity"
+541-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:532:13-65
+542            android:exported="false"
+542-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:533:13-37
+543            android:label="@string/title_activity_watch9_pairing" />
+543-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:534:13-66
+544        <activity
+544-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:535:9-538:73
+545            android:name="nodomain.freeyourgadget.gadgetbridge.devices.watch9.Watch9CalibrationActivity"
+545-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:536:13-69
+546            android:exported="false"
+546-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:537:13-37
+547            android:label="@string/title_activity_watch9_calibration" />
+547-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:538:13-70
+548        <activity
+548-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:539:9-542:69
+549            android:name="nodomain.freeyourgadget.gadgetbridge.devices.lenovo.LenovoWatchPairingActivity"
+549-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:540:13-70
+550            android:exported="false"
+550-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:541:13-37
+551            android:label="@string/title_activity_watch9_pairing" />
+551-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:542:13-66
+552        <activity
+552-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:543:9-546:78
+553            android:name="nodomain.freeyourgadget.gadgetbridge.devices.lenovo.LenovoWatchCalibrationActivity"
+553-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:544:13-74
+554            android:exported="false"
+554-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:545:13-37
+555            android:label="@string/title_activity_LenovoWatch_calibration" />
+555-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:546:13-75
+556        <activity
+556-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:547:9-551:72
+557            android:name="nodomain.freeyourgadget.gadgetbridge.activities.charts.ChartsActivity"
+557-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:548:13-61
+558            android:exported="false"
+558-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:550:13-37
+559            android:label="@string/title_activity_charts"
+559-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:549:13-58
+560            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+560-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:551:13-69
+561        <activity
+561-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:552:9-556:72
+562            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ConfigureAlarms"
+562-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:553:13-55
+563            android:exported="false"
+563-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:555:13-37
+564            android:label="@string/title_activity_set_alarm"
+564-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:554:13-61
+565            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+565-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:556:13-69
+566        <activity
+566-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:557:9-561:72
+567            android:name="nodomain.freeyourgadget.gadgetbridge.activities.devicesettings.DeviceSettingsActivity"
+567-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:558:13-77
+568            android:exported="false"
+568-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:560:13-37
+569            android:label="@string/title_activity_device_specific_settings"
+569-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:559:13-76
+570            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+570-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:561:13-69
+571        <activity
+571-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:562:9-567:52
+572            android:name="nodomain.freeyourgadget.gadgetbridge.activities.AlarmDetails"
+572-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:563:13-52
+573            android:exported="false"
+573-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:565:13-37
+574            android:label="@string/title_activity_alarm_details"
+574-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:564:13-65
+575            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ConfigureAlarms"
+575-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:566:13-69
+576            android:screenOrientation="portrait" />
+576-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:567:13-49
+577        <activity
+577-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:568:9-572:72
+578            android:name="nodomain.freeyourgadget.gadgetbridge.activities.VibrationActivity"
+578-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:569:13-57
+579            android:exported="false"
+579-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:571:13-37
+580            android:label="@string/title_activity_vibration"
+580-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:570:13-61
+581            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+581-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:572:13-69
+582        <activity
+582-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:573:9-578:67
+583            android:name="nodomain.freeyourgadget.gadgetbridge.activities.NotificationFilterActivity"
+583-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:574:13-66
+584            android:exported="false"
+584-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:576:13-37
+585            android:label="@string/title_activity_notification_filter"
+585-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:575:13-71
+586            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.AppBlacklistActivity"
+586-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:577:13-74
+587            android:windowSoftInputMode="stateHidden|adjustPan" />
+587-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:578:13-64
+588        <activity
+588-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:579:9-582:42
+589            android:name="nodomain.freeyourgadget.gadgetbridge.activities.FindPhoneActivity"
+589-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:580:13-57
+590            android:exported="false"
+590-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:581:13-37
+591            android:label="Find Phone" />
+591-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:582:13-39
+592
+593        <provider
+593-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:584:9-587:39
+594            android:name="nodomain.freeyourgadget.gadgetbridge.contentprovider.PebbleContentProvider"
+594-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:585:13-66
+595            android:authorities="com.getpebble.android.provider"
+595-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:586:13-65
+596            android:exported="true" />
+596-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:587:13-36
+597        <provider
+598            android:name="androidx.core.content.FileProvider"
+598-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:589:13-62
+599            android:authorities="nodomain.freeyourgadget.gadgetbridge.screenshot_provider"
+599-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:590:13-71
+600            android:exported="false"
+600-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:591:13-37
+601            android:grantUriPermissions="true" >
+601-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:592:13-47
+602            <meta-data
+602-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:593:13-595:56
+603                android:name="android.support.FILE_PROVIDER_PATHS"
+603-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:594:17-67
+604                android:resource="@xml/shared_paths" />
+604-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:595:17-53
+605        </provider>
+606
+607        <receiver
+607-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:598:9-610:20
+608            android:name="nodomain.freeyourgadget.gadgetbridge.SleepAlarmWidget"
+608-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:599:13-45
+609            android:exported="true"
+609-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:600:13-36
+610            android:label="@string/appwidget_sleep_alarm_widget_label" >
+610-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:601:13-71
+611            <intent-filter>
+611-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:602:13-605:29
+612                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+612-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:603:17-84
+612-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:603:25-81
+613                <action android:name="nodomain.freeyourgadget.gadgetbridge.SLEEP_ALARM_WIDGET_CLICK" />
+613-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:604:17-104
+613-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:604:25-101
+614            </intent-filter>
+615
+616            <meta-data
+616-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:607:13-609:67
+617                android:name="android.appwidget.provider"
+617-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:608:17-58
+618                android:resource="@xml/sleep_alarm_widget_info" />
+618-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:609:17-64
+619        </receiver>
+620        <receiver
+620-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:611:9-625:20
+621            android:name="nodomain.freeyourgadget.gadgetbridge.Widget"
+621-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:612:13-35
+622            android:exported="true"
+622-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:613:13-36
+623            android:label="@string/widget_listing_label" >
+623-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:614:13-57
+624            <intent-filter>
+624-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:615:13-620:29
+625                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+625-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:603:17-84
+625-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:603:25-81
+626                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+626-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:617:17-85
+626-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:617:25-82
+627                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+627-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:618:17-86
+627-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:618:25-83
+628                <action android:name="nodomain.freeyourgadget.gadgetbridge.WidgetClick" />
+628-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:619:17-91
+628-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:619:25-88
+629            </intent-filter>
+630
+631            <meta-data
+631-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:607:13-609:67
+632                android:name="android.appwidget.provider"
+632-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:608:17-58
+633                android:resource="@xml/widget_info" />
+633-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:609:17-64
+634        </receiver>
+635
+636        <activity
+636-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:627:9-632:67
+637            android:name="nodomain.freeyourgadget.gadgetbridge.activities.WidgetAlarmsActivity"
+637-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:628:13-60
+638            android:excludeFromRecents="true"
+638-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:629:13-46
+639            android:exported="false"
+639-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:631:13-37
+640            android:launchMode="singleInstance"
+640-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:630:13-48
+641            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+641-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:632:13-64
+642        <activity
+642-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:633:9-639:20
+643            android:name="nodomain.freeyourgadget.gadgetbridge.activities.WidgetConfigurationActivity"
+643-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:634:13-67
+644            android:exported="true" >
+644-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:635:13-36
+645            <intent-filter>
+645-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:636:13-638:29
+646                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+646-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:637:17-87
+646-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:637:25-84
+647            </intent-filter>
+648        </activity>
+649        <activity
+649-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:640:9-660:20
+650            android:name="nodomain.freeyourgadget.gadgetbridge.activities.ExternalPebbleJSActivity"
+650-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:641:13-64
+651            android:allowTaskReparenting="true"
+651-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:642:13-48
+652            android:clearTaskOnLaunch="true"
+652-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:643:13-45
+653            android:exported="true"
+653-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:646:13-36
+654            android:label="@string/app_configure"
+654-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:644:13-50
+655            android:launchMode="singleTask"
+655-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:645:13-44
+656            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.appmanager.AppManagerActivity" >
+656-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:647:13-83
+657            <meta-data
+657-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:648:13-650:99
+658                android:name="android.support.PARENT_ACTIVITY"
+658-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:649:17-63
+659                android:value="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+659-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:650:17-96
+660
+661            <intent-filter>
+661-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:652:13-659:29
+662                <action android:name="android.intent.action.VIEW" />
+662-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:17-69
+662-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:158:25-66
+663
+664                <category android:name="android.intent.category.DEFAULT" />
+664-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+664-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+665                <category android:name="android.intent.category.BROWSABLE" />
+665-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:656:17-78
+665-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:656:27-75
+666
+667                <data android:scheme="gadgetbridge" />
+667-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+667-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:166:23-44
+668            </intent-filter>
+669        </activity>
+670        <activity
+670-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:661:9-665:72
+671            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.ConfigActivity"
+671-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:662:13-59
+672            android:exported="true"
+672-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:663:13-36
+673            android:label="@string/qhybrid_title_watchface"
+673-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:664:13-60
+674            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+674-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:665:13-69
+675        <activity
+675-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:666:9-670:76
+676            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.QHybridAppChoserActivity"
+676-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:667:13-69
+677            android:exported="true"
+677-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:668:13-36
+678            android:label="@string/qhybrid_title_apps"
+678-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:669:13-55
+679            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.ConfigActivity" />
+679-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:670:13-73
+680        <activity
+680-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:671:9-675:72
+681            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity"
+681-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:672:13-61
+682            android:exported="true"
+682-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:673:13-36
+683            android:label="@string/qhybrid_title_watchface"
+683-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:674:13-60
+684            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.ControlCenterv2" />
+684-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:675:13-69
+685        <activity
+685-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:676:9-680:78
+686            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.WidgetSettingsActivity"
+686-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:677:13-67
+687            android:exported="false"
+687-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:679:13-37
+688            android:label="@string/add_widget"
+688-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:678:13-47
+689            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+689-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:680:13-75
+690        <activity
+690-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:681:9-685:78
+691            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.ImageEditActivity"
+691-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:682:13-62
+692            android:exported="true"
+692-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:683:13-36
+693            android:label="@string/qhybrid_title_background_image"
+693-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:684:13-67
+694            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+694-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:685:13-75
+695        <activity
+695-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:686:9-690:78
+696            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.FileManagementActivity"
+696-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:687:13-67
+697            android:exported="true"
+697-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:688:13-36
+698            android:label="@string/qhybrid_title_file_management"
+698-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:689:13-66
+699            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+699-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:690:13-75
+700        <activity
+700-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:691:9-695:78
+701            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.AppsManagementActivity"
+701-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:692:13-67
+702            android:exported="true"
+702-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:693:13-36
+703            android:label="@string/qhybrid_title_apps_management"
+703-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:694:13-66
+704            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+704-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:695:13-75
+705        <activity
+705-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:696:9-700:78
+706            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.CalibrationActivity"
+706-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:697:13-64
+707            android:exported="false"
+707-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:699:13-37
+708            android:label="@string/qhybrid_title_calibration"
+708-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:698:13-62
+709            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+709-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:700:13-75
+710        <activity
+710-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:701:9-705:78
+711            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.CommuteActionsActivity"
+711-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:702:13-67
+712            android:exported="false"
+712-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:704:13-37
+713            android:label="@string/qhybrid_pref_title_actions"
+713-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:703:13-63
+714            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HRConfigActivity" />
+714-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:705:13-75
+715        <activity
+715-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:706:9-711:52
+716            android:name="nodomain.freeyourgadget.gadgetbridge.devices.qhybrid.HybridHRWatchfaceDesignerActivity"
+716-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:707:13-78
+717            android:exported="false"
+717-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:709:13-37
+718            android:label="@string/qhybrid_title_watchface_designer"
+718-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:708:13-69
+719            android:parentActivityName="nodomain.freeyourgadget.gadgetbridge.activities.appmanager.AppManagerActivity"
+719-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:710:13-83
+720            android:screenOrientation="portrait" />
+720-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:711:13-49
+721        <activity
+721-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:712:9-714:39
+722            android:name="nodomain.freeyourgadget.gadgetbridge.devices.um25.Activity.DataActivity"
+722-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:713:13-63
+723            android:exported="true" />
+723-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:714:13-36
+724        <activity
+724-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:715:9-729:20
+725            android:name="nodomain.freeyourgadget.gadgetbridge.activities.GpxReceiverActivity"
+725-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:716:13-59
+726            android:exported="false"
+726-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:717:13-37
+727            android:label="@string/gpx_receiver_activity_title"
+727-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:718:13-64
+728            android:screenOrientation="portrait"
+728-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:719:13-49
+729            android:windowSoftInputMode="stateHidden" >
+729-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:720:13-54
+730            <intent-filter>
+730-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:721:13-728:29
+731                <action android:name="android.intent.action.SEND" />
+731-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:368:17-69
+731-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:368:25-66
+732                <action android:name="android.intent.action.SEND_MULTIPLE" />
+732-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:723:17-78
+732-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:723:25-75
+733
+734                <category android:name="android.intent.category.DEFAULT" />
+734-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:17-76
+734-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:103:27-73
+735
+736                <data android:mimeType="*/*" />
+736-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:17-48
+736-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:162:23-45
+737            </intent-filter>
+738        </activity>
+739
+740        <provider
+740-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
+741            android:name="androidx.startup.InitializationProvider"
+741-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:32:13-67
+742            android:authorities="nodomain.freeyourgadget.gadgetbridge.androidx-startup"
+742-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:33:13-68
+743            android:exported="false" >
+743-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:34:13-37
+744            <meta-data
+744-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+745                android:name="androidx.work.WorkManagerInitializer"
+745-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+746                android:value="androidx.startup" />
+746-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+747            <meta-data
+747-->[androidx.emoji2:emoji2:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/2ff949ec9f8e470a9714a1562ce48f69/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+748                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+748-->[androidx.emoji2:emoji2:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/2ff949ec9f8e470a9714a1562ce48f69/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+749                android:value="androidx.startup" />
+749-->[androidx.emoji2:emoji2:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/2ff949ec9f8e470a9714a1562ce48f69/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+750            <meta-data
+750-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/pjukic/.gradle/caches/transforms-3/071c9946ddb408598b88c13983cf3353/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+751                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+751-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/pjukic/.gradle/caches/transforms-3/071c9946ddb408598b88c13983cf3353/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+752                android:value="androidx.startup" />
+752-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/pjukic/.gradle/caches/transforms-3/071c9946ddb408598b88c13983cf3353/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+753        </provider>
+754
+755        <service
+755-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+756            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+756-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+757            android:directBootAware="false"
+757-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+758            android:enabled="@bool/enable_system_alarm_service_default"
+758-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+759            android:exported="false" />
+759-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+760        <service
+760-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+761            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+761-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+762            android:directBootAware="false"
+762-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+763            android:enabled="@bool/enable_system_job_service_default"
+763-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+764            android:exported="true"
+764-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+765            android:permission="android.permission.BIND_JOB_SERVICE" />
+765-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+766        <service
+766-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+767            android:name="androidx.work.impl.foreground.SystemForegroundService"
+767-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+768            android:directBootAware="false"
+768-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+769            android:enabled="@bool/enable_system_foreground_service_default"
+769-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+770            android:exported="false" />
+770-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+771
+772        <receiver
+772-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+773            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+773-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+774            android:directBootAware="false"
+774-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+775            android:enabled="true"
+775-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+776            android:exported="false" />
+776-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+777        <receiver
+777-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+778            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+778-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+779            android:directBootAware="false"
+779-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+780            android:enabled="false"
+780-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+781            android:exported="false" >
+781-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+782            <intent-filter>
+782-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+783                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+783-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+783-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+784                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+784-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+784-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+785            </intent-filter>
+786        </receiver>
+787        <receiver
+787-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+788            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+788-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+789            android:directBootAware="false"
+789-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+790            android:enabled="false"
+790-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+791            android:exported="false" >
+791-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+792            <intent-filter>
+792-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+793                <action android:name="android.intent.action.BATTERY_OKAY" />
+793-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+793-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+794                <action android:name="android.intent.action.BATTERY_LOW" />
+794-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+794-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+795            </intent-filter>
+796        </receiver>
+797        <receiver
+797-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+798            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+798-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+799            android:directBootAware="false"
+799-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+800            android:enabled="false"
+800-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+801            android:exported="false" >
+801-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+802            <intent-filter>
+802-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+803                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+803-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+803-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+804                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+804-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+804-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+805            </intent-filter>
+806        </receiver>
+807        <receiver
+807-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+808            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+808-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+809            android:directBootAware="false"
+809-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+810            android:enabled="false"
+810-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+811            android:exported="false" >
+811-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+812            <intent-filter>
+812-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+813                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+813-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+813-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+814            </intent-filter>
+815        </receiver>
+816        <receiver
+816-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+817            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+817-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+818            android:directBootAware="false"
+818-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+819            android:enabled="false"
+819-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+820            android:exported="false" >
+820-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+821            <intent-filter>
+821-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+822                <action android:name="android.intent.action.BOOT_COMPLETED" />
+822-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:423:17-79
+822-->/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/AndroidManifest.xml:423:25-76
+823                <action android:name="android.intent.action.TIME_SET" />
+823-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+823-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+824                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+824-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+824-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+825            </intent-filter>
+826        </receiver>
+827        <receiver
+827-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+828            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+828-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+829            android:directBootAware="false"
+829-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+830            android:enabled="@bool/enable_system_alarm_service_default"
+830-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+831            android:exported="false" >
+831-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+832            <intent-filter>
+832-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+833                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+833-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+833-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+834            </intent-filter>
+835        </receiver>
+836        <receiver
+836-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+837            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+837-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+838            android:directBootAware="false"
+838-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+839            android:enabled="true"
+839-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+840            android:exported="true"
+840-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+841            android:permission="android.permission.DUMP" >
+841-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+842            <intent-filter>
+842-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+843                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+843-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+843-->[androidx.work:work-runtime:2.7.1] /Users/pjukic/.gradle/caches/transforms-3/30168af4af0580b0fe6fb1bb67213653/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+844            </intent-filter>
+845        </receiver>
+846
+847        <uses-library
+847-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+848            android:name="androidx.window.extensions"
+848-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+849            android:required="false" />
+849-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+850        <uses-library
+850-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+851            android:name="androidx.window.sidecar"
+851-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+852            android:required="false" />
+852-->[androidx.window:window:1.0.0] /Users/pjukic/.gradle/caches/transforms-3/72b5e5829c7b54faf928f65e4f4e54b2/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+853
+854        <service
+854-->[androidx.room:room-runtime:2.2.5] /Users/pjukic/.gradle/caches/transforms-3/1fb3656fe0fece5ba930b50ad85ef3fb/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+855            android:name="androidx.room.MultiInstanceInvalidationService"
+855-->[androidx.room:room-runtime:2.2.5] /Users/pjukic/.gradle/caches/transforms-3/1fb3656fe0fece5ba930b50ad85ef3fb/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+856            android:directBootAware="true"
+856-->[androidx.room:room-runtime:2.2.5] /Users/pjukic/.gradle/caches/transforms-3/1fb3656fe0fece5ba930b50ad85ef3fb/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+857            android:exported="false" />
+857-->[androidx.room:room-runtime:2.2.5] /Users/pjukic/.gradle/caches/transforms-3/1fb3656fe0fece5ba930b50ad85ef3fb/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+858    </application>
+859
+860</manifest>
