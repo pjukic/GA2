@@ -52,6 +52,9 @@ public interface ITelephony extends android.os.IInterface
     @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException
     {
       java.lang.String descriptor = DESCRIPTOR;
+      if (code >= android.os.IBinder.FIRST_CALL_TRANSACTION && code <= android.os.IBinder.LAST_CALL_TRANSACTION) {
+        data.enforceInterface(descriptor);
+      }
       switch (code)
       {
         case INTERFACE_TRANSACTION:
@@ -64,31 +67,29 @@ public interface ITelephony extends android.os.IInterface
       {
         case TRANSACTION_endCall:
         {
-          data.enforceInterface(descriptor);
           boolean _result = this.endCall();
           reply.writeNoException();
           reply.writeInt(((_result)?(1):(0)));
-          return true;
+          break;
         }
         case TRANSACTION_answerRingingCall:
         {
-          data.enforceInterface(descriptor);
           this.answerRingingCall();
           reply.writeNoException();
-          return true;
+          break;
         }
         case TRANSACTION_silenceRinger:
         {
-          data.enforceInterface(descriptor);
           this.silenceRinger();
           reply.writeNoException();
-          return true;
+          break;
         }
         default:
         {
           return super.onTransact(code, data, reply, flags);
         }
       }
+      return true;
     }
     private static class Proxy implements com.android.internal.telephony.ITelephony
     {
@@ -113,11 +114,6 @@ public interface ITelephony extends android.os.IInterface
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
           boolean _status = mRemote.transact(Stub.TRANSACTION_endCall, _data, _reply, 0);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              return getDefaultImpl().endCall();
-            }
-          }
           _reply.readException();
           _result = (0!=_reply.readInt());
         }
@@ -134,12 +130,6 @@ public interface ITelephony extends android.os.IInterface
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
           boolean _status = mRemote.transact(Stub.TRANSACTION_answerRingingCall, _data, _reply, 0);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().answerRingingCall();
-              return;
-            }
-          }
           _reply.readException();
         }
         finally {
@@ -154,12 +144,6 @@ public interface ITelephony extends android.os.IInterface
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
           boolean _status = mRemote.transact(Stub.TRANSACTION_silenceRinger, _data, _reply, 0);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().silenceRinger();
-              return;
-            }
-          }
           _reply.readException();
         }
         finally {
@@ -167,28 +151,11 @@ public interface ITelephony extends android.os.IInterface
           _data.recycle();
         }
       }
-      public static com.android.internal.telephony.ITelephony sDefaultImpl;
     }
     public static final java.lang.String DESCRIPTOR = "com.android.internal.telephony.ITelephony";
     static final int TRANSACTION_endCall = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
     static final int TRANSACTION_answerRingingCall = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
     static final int TRANSACTION_silenceRinger = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);
-    public static boolean setDefaultImpl(com.android.internal.telephony.ITelephony impl) {
-      // Only one user of this interface can use this function
-      // at a time. This is a heuristic to detect if two different
-      // users in the same process use this function.
-      if (Stub.Proxy.sDefaultImpl != null) {
-        throw new IllegalStateException("setDefaultImpl() called twice");
-      }
-      if (impl != null) {
-        Stub.Proxy.sDefaultImpl = impl;
-        return true;
-      }
-      return false;
-    }
-    public static com.android.internal.telephony.ITelephony getDefaultImpl() {
-      return Stub.Proxy.sDefaultImpl;
-    }
   }
   public boolean endCall() throws android.os.RemoteException;
   public void answerRingingCall() throws android.os.RemoteException;

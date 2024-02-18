@@ -61,6 +61,9 @@ public interface ILineageWeatherManager extends android.os.IInterface
     @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException
     {
       java.lang.String descriptor = DESCRIPTOR;
+      if (code >= android.os.IBinder.FIRST_CALL_TRANSACTION && code <= android.os.IBinder.LAST_CALL_TRANSACTION) {
+        data.enforceInterface(descriptor);
+      }
       switch (code)
       {
         case INTERFACE_TRANSACTION:
@@ -73,67 +76,52 @@ public interface ILineageWeatherManager extends android.os.IInterface
       {
         case TRANSACTION_updateWeather:
         {
-          data.enforceInterface(descriptor);
           lineageos.weather.RequestInfo _arg0;
-          if ((0!=data.readInt())) {
-            _arg0 = lineageos.weather.RequestInfo.CREATOR.createFromParcel(data);
-          }
-          else {
-            _arg0 = null;
-          }
+          _arg0 = _Parcel.readTypedObject(data, lineageos.weather.RequestInfo.CREATOR);
           this.updateWeather(_arg0);
-          return true;
+          break;
         }
         case TRANSACTION_lookupCity:
         {
-          data.enforceInterface(descriptor);
           lineageos.weather.RequestInfo _arg0;
-          if ((0!=data.readInt())) {
-            _arg0 = lineageos.weather.RequestInfo.CREATOR.createFromParcel(data);
-          }
-          else {
-            _arg0 = null;
-          }
+          _arg0 = _Parcel.readTypedObject(data, lineageos.weather.RequestInfo.CREATOR);
           this.lookupCity(_arg0);
-          return true;
+          break;
         }
         case TRANSACTION_registerWeatherServiceProviderChangeListener:
         {
-          data.enforceInterface(descriptor);
           lineageos.weather.IWeatherServiceProviderChangeListener _arg0;
           _arg0 = lineageos.weather.IWeatherServiceProviderChangeListener.Stub.asInterface(data.readStrongBinder());
           this.registerWeatherServiceProviderChangeListener(_arg0);
-          return true;
+          break;
         }
         case TRANSACTION_unregisterWeatherServiceProviderChangeListener:
         {
-          data.enforceInterface(descriptor);
           lineageos.weather.IWeatherServiceProviderChangeListener _arg0;
           _arg0 = lineageos.weather.IWeatherServiceProviderChangeListener.Stub.asInterface(data.readStrongBinder());
           this.unregisterWeatherServiceProviderChangeListener(_arg0);
-          return true;
+          break;
         }
         case TRANSACTION_getActiveWeatherServiceProviderLabel:
         {
-          data.enforceInterface(descriptor);
           java.lang.String _result = this.getActiveWeatherServiceProviderLabel();
           reply.writeNoException();
           reply.writeString(_result);
-          return true;
+          break;
         }
         case TRANSACTION_cancelRequest:
         {
-          data.enforceInterface(descriptor);
           int _arg0;
           _arg0 = data.readInt();
           this.cancelRequest(_arg0);
-          return true;
+          break;
         }
         default:
         {
           return super.onTransact(code, data, reply, flags);
         }
       }
+      return true;
     }
     private static class Proxy implements lineageos.weather.ILineageWeatherManager
     {
@@ -155,20 +143,8 @@ public interface ILineageWeatherManager extends android.os.IInterface
         android.os.Parcel _data = android.os.Parcel.obtain();
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
-          if ((info!=null)) {
-            _data.writeInt(1);
-            info.writeToParcel(_data, 0);
-          }
-          else {
-            _data.writeInt(0);
-          }
+          _Parcel.writeTypedObject(_data, info, 0);
           boolean _status = mRemote.transact(Stub.TRANSACTION_updateWeather, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().updateWeather(info);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
@@ -179,20 +155,8 @@ public interface ILineageWeatherManager extends android.os.IInterface
         android.os.Parcel _data = android.os.Parcel.obtain();
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
-          if ((info!=null)) {
-            _data.writeInt(1);
-            info.writeToParcel(_data, 0);
-          }
-          else {
-            _data.writeInt(0);
-          }
+          _Parcel.writeTypedObject(_data, info, 0);
           boolean _status = mRemote.transact(Stub.TRANSACTION_lookupCity, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().lookupCity(info);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
@@ -203,14 +167,8 @@ public interface ILineageWeatherManager extends android.os.IInterface
         android.os.Parcel _data = android.os.Parcel.obtain();
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
-          _data.writeStrongBinder((((listener!=null))?(listener.asBinder()):(null)));
+          _data.writeStrongInterface(listener);
           boolean _status = mRemote.transact(Stub.TRANSACTION_registerWeatherServiceProviderChangeListener, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().registerWeatherServiceProviderChangeListener(listener);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
@@ -221,14 +179,8 @@ public interface ILineageWeatherManager extends android.os.IInterface
         android.os.Parcel _data = android.os.Parcel.obtain();
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
-          _data.writeStrongBinder((((listener!=null))?(listener.asBinder()):(null)));
+          _data.writeStrongInterface(listener);
           boolean _status = mRemote.transact(Stub.TRANSACTION_unregisterWeatherServiceProviderChangeListener, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().unregisterWeatherServiceProviderChangeListener(listener);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
@@ -242,11 +194,6 @@ public interface ILineageWeatherManager extends android.os.IInterface
         try {
           _data.writeInterfaceToken(DESCRIPTOR);
           boolean _status = mRemote.transact(Stub.TRANSACTION_getActiveWeatherServiceProviderLabel, _data, _reply, 0);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              return getDefaultImpl().getActiveWeatherServiceProviderLabel();
-            }
-          }
           _reply.readException();
           _result = _reply.readString();
         }
@@ -263,18 +210,11 @@ public interface ILineageWeatherManager extends android.os.IInterface
           _data.writeInterfaceToken(DESCRIPTOR);
           _data.writeInt(requestId);
           boolean _status = mRemote.transact(Stub.TRANSACTION_cancelRequest, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().cancelRequest(requestId);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
         }
       }
-      public static lineageos.weather.ILineageWeatherManager sDefaultImpl;
     }
     static final int TRANSACTION_updateWeather = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
     static final int TRANSACTION_lookupCity = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
@@ -282,22 +222,6 @@ public interface ILineageWeatherManager extends android.os.IInterface
     static final int TRANSACTION_unregisterWeatherServiceProviderChangeListener = (android.os.IBinder.FIRST_CALL_TRANSACTION + 3);
     static final int TRANSACTION_getActiveWeatherServiceProviderLabel = (android.os.IBinder.FIRST_CALL_TRANSACTION + 4);
     static final int TRANSACTION_cancelRequest = (android.os.IBinder.FIRST_CALL_TRANSACTION + 5);
-    public static boolean setDefaultImpl(lineageos.weather.ILineageWeatherManager impl) {
-      // Only one user of this interface can use this function
-      // at a time. This is a heuristic to detect if two different
-      // users in the same process use this function.
-      if (Stub.Proxy.sDefaultImpl != null) {
-        throw new IllegalStateException("setDefaultImpl() called twice");
-      }
-      if (impl != null) {
-        Stub.Proxy.sDefaultImpl = impl;
-        return true;
-      }
-      return false;
-    }
-    public static lineageos.weather.ILineageWeatherManager getDefaultImpl() {
-      return Stub.Proxy.sDefaultImpl;
-    }
   }
   public static final java.lang.String DESCRIPTOR = "lineageos.weather.ILineageWeatherManager";
   public void updateWeather(lineageos.weather.RequestInfo info) throws android.os.RemoteException;
@@ -306,4 +230,25 @@ public interface ILineageWeatherManager extends android.os.IInterface
   public void unregisterWeatherServiceProviderChangeListener(lineageos.weather.IWeatherServiceProviderChangeListener listener) throws android.os.RemoteException;
   public java.lang.String getActiveWeatherServiceProviderLabel() throws android.os.RemoteException;
   public void cancelRequest(int requestId) throws android.os.RemoteException;
+  /** @hide */
+  static class _Parcel {
+    static private <T> T readTypedObject(
+        android.os.Parcel parcel,
+        android.os.Parcelable.Creator<T> c) {
+      if (parcel.readInt() != 0) {
+          return c.createFromParcel(parcel);
+      } else {
+          return null;
+      }
+    }
+    static private <T extends android.os.Parcelable> void writeTypedObject(
+        android.os.Parcel parcel, T value, int parcelableFlags) {
+      if (value != null) {
+        parcel.writeInt(1);
+        value.writeToParcel(parcel, parcelableFlags);
+      } else {
+        parcel.writeInt(0);
+      }
+    }
+  }
 }

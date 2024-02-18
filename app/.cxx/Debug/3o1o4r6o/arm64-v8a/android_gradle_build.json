@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/src/main/c/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/pjukic/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/pjukic/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "tiny-edhc-Debug-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/pjukic/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/arm64-v8a",
+        "tiny-edhc"
+      ],
+      "buildType": "debug",
+      "abi": "arm64-v8a",
+      "artifactName": "tiny-edhc",
+      "output": "/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/build/intermediates/cxx/Debug/3o1o4r6o/obj/arm64-v8a/libtiny-edhc.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

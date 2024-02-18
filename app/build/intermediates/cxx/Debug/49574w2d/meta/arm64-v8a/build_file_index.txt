@@ -1,1 +1,0 @@
-/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/GitHub/GA2/app/src/main/c/CMakeLists.txt

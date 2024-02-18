@@ -1,9 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: de.cketti.library.changelog:ckchangelog:1.2.2@aar">
+  <library name="Gradle: de.cketti.library.changelog:ckchangelog:1.2.2@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/842ad0edc7e880785a58ef5212bdee9a/transformed/jetified-ckchangelog-1.2.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/842ad0edc7e880785a58ef5212bdee9a/transformed/jetified-ckchangelog-1.2.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/842ad0edc7e880785a58ef5212bdee9a/transformed/jetified-ckchangelog-1.2.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dce57602b5869e8086672b3b13ca227b/transformed/jetified-ckchangelog-1.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dce57602b5869e8086672b3b13ca227b/transformed/jetified-ckchangelog-1.2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dce57602b5869e8086672b3b13ca227b/transformed/jetified-ckchangelog-1.2.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.cketti.library.changelog/ckchangelog/1.2.2/e7102b24ec516ac3c0caf9c000b92cf86ddf74e8/ckchangelog-1.2.2-javadoc.jar!/" />

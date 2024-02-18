@@ -46,6 +46,9 @@ public interface IWeatherServiceProviderChangeListener extends android.os.IInter
     @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException
     {
       java.lang.String descriptor = DESCRIPTOR;
+      if (code >= android.os.IBinder.FIRST_CALL_TRANSACTION && code <= android.os.IBinder.LAST_CALL_TRANSACTION) {
+        data.enforceInterface(descriptor);
+      }
       switch (code)
       {
         case INTERFACE_TRANSACTION:
@@ -58,17 +61,17 @@ public interface IWeatherServiceProviderChangeListener extends android.os.IInter
       {
         case TRANSACTION_onWeatherServiceProviderChanged:
         {
-          data.enforceInterface(descriptor);
           java.lang.String _arg0;
           _arg0 = data.readString();
           this.onWeatherServiceProviderChanged(_arg0);
-          return true;
+          break;
         }
         default:
         {
           return super.onTransact(code, data, reply, flags);
         }
       }
+      return true;
     }
     private static class Proxy implements lineageos.weather.IWeatherServiceProviderChangeListener
     {
@@ -92,36 +95,13 @@ public interface IWeatherServiceProviderChangeListener extends android.os.IInter
           _data.writeInterfaceToken(DESCRIPTOR);
           _data.writeString(providerLabel);
           boolean _status = mRemote.transact(Stub.TRANSACTION_onWeatherServiceProviderChanged, _data, null, android.os.IBinder.FLAG_ONEWAY);
-          if (!_status) {
-            if (getDefaultImpl() != null) {
-              getDefaultImpl().onWeatherServiceProviderChanged(providerLabel);
-              return;
-            }
-          }
         }
         finally {
           _data.recycle();
         }
       }
-      public static lineageos.weather.IWeatherServiceProviderChangeListener sDefaultImpl;
     }
     static final int TRANSACTION_onWeatherServiceProviderChanged = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
-    public static boolean setDefaultImpl(lineageos.weather.IWeatherServiceProviderChangeListener impl) {
-      // Only one user of this interface can use this function
-      // at a time. This is a heuristic to detect if two different
-      // users in the same process use this function.
-      if (Stub.Proxy.sDefaultImpl != null) {
-        throw new IllegalStateException("setDefaultImpl() called twice");
-      }
-      if (impl != null) {
-        Stub.Proxy.sDefaultImpl = impl;
-        return true;
-      }
-      return false;
-    }
-    public static lineageos.weather.IWeatherServiceProviderChangeListener getDefaultImpl() {
-      return Stub.Proxy.sDefaultImpl;
-    }
   }
   public static final java.lang.String DESCRIPTOR = "lineageos.weather.IWeatherServiceProviderChangeListener";
   public void onWeatherServiceProviderChanged(java.lang.String providerLabel) throws android.os.RemoteException;

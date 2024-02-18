@@ -1,9 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: org.cyanogenmod:platform.sdk:6.0@aar">
+  <library name="Gradle: org.cyanogenmod:platform.sdk:6.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4bf4c12e71af47b1f58ba474a7ef6494/transformed/jetified-platform.sdk-6.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4bf4c12e71af47b1f58ba474a7ef6494/transformed/jetified-platform.sdk-6.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4bf4c12e71af47b1f58ba474a7ef6494/transformed/jetified-platform.sdk-6.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e372b17b75f41eeadfa11257ce09772/transformed/jetified-platform.sdk-6.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8e372b17b75f41eeadfa11257ce09772/transformed/jetified-platform.sdk-6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e372b17b75f41eeadfa11257ce09772/transformed/jetified-platform.sdk-6.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.cyanogenmod/platform.sdk/6.0/a1118c445c045352e41532c905e9c2ec33ae5fef/platform.sdk-6.0-javadoc.jar!/" />

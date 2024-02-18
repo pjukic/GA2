@@ -1,0 +1,14 @@
+# ninja log v5
+0	45	1708254123	CMakeFiles/tiny-edhc.dir/ecdh_jni.c.o	28c024cbbf116210
+0	52	1708254123	CMakeFiles/tiny-edhc.dir/ecdh.c.o	c4c70a93db1018bd
+52	109	1708254124	/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/build/intermediates/cxx/Debug/3o1o4r6o/obj/x86_64/libtiny-edhc.so	1018e3644fb94721
+0	11	0	clean	316471a6053b5400
+0	53	1708293027	CMakeFiles/tiny-edhc.dir/ecdh_jni.c.o	28c024cbbf116210
+0	62	1708293027	CMakeFiles/tiny-edhc.dir/ecdh.c.o	c4c70a93db1018bd
+62	128	1708293027	/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/build/intermediates/cxx/Debug/3o1o4r6o/obj/x86_64/libtiny-edhc.so	1018e3644fb94721
+0	10	0	clean	316471a6053b5400
+0	11	0	clean	316471a6053b5400
+0	11	0	clean	316471a6053b5400
+0	55	1708293091	CMakeFiles/tiny-edhc.dir/ecdh_jni.c.o	28c024cbbf116210
+0	60	1708293091	CMakeFiles/tiny-edhc.dir/ecdh.c.o	c4c70a93db1018bd
+60	125	1708293091	/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/build/intermediates/cxx/Debug/3o1o4r6o/obj/x86_64/libtiny-edhc.so	1018e3644fb94721
