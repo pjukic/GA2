@@ -1,3 +1,0 @@
-/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/x86/CMakeFiles/rebuild_cache.dir
-/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/x86/CMakeFiles/edit_cache.dir
-/Users/pjukic/Library/Mobile Documents/com~apple~CloudDocs/iData/project/GitHub/GA2/app/.cxx/Debug/3o1o4r6o/x86/CMakeFiles/tiny-edhc.dir
